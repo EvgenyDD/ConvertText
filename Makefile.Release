@@ -85,7 +85,7 @@ release/exeicon_res.o: exeicon.rc
 	windres -i exeicon.rc -o release/exeicon_res.o --include-dir=. $(DEFINES)
 
 qmake: FORCE
-	@$(QMAKE) -spec win32-g++ CONFIG+=release -o Makefile.Release ConvertText.pro
+	@$(QMAKE) -spec win32-g++ -o Makefile.Release ConvertText.pro
 
 qmake_all: FORCE
 
@@ -97,7 +97,7 @@ clean: compiler_clean
 	-$(DEL_FILE) release/exeicon_res.o
 
 distclean: clean 
-	-$(DEL_FILE) H:/WORKSPACE/Qt/ConvertText/converttext_plugin_import.cpp
+	-$(DEL_FILE) H:/WORKSPACE/_Qt/_archive/ConvertText/converttext_plugin_import.cpp
 	-$(DEL_FILE) $(DESTDIR_TARGET)
 	-$(DEL_FILE) Makefile.Release
 
@@ -225,7 +225,7 @@ release/moc_widget.cpp: C:/Qt/Static/5.3.2/include/QtWidgets/QWidget \
 		C:/Qt/Static/5.3.2/include/QtGui/qtextformat.h \
 		C:/Qt/Static/5.3.2/include/QtGui/qpen.h \
 		widget.h
-	'C:\Qt\Static\5.3.2\bin\moc.exe' $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/Static/5.3.2/mkspecs/win32-g++ -IH:/WORKSPACE/Qt/ConvertText -IC:/Qt/Static/5.3.2/include -IC:/Qt/Static/5.3.2/include/QtDeclarative -IC:/Qt/Static/5.3.2/include/QtWidgets -IC:/Qt/Static/5.3.2/include/QtScript -IC:/Qt/Static/5.3.2/include/QtGui -IC:/Qt/Static/5.3.2/include/QtCore widget.h -o release/moc_widget.cpp
+	'C:\Qt\Static\5.3.2\bin\moc.exe' $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/Static/5.3.2/mkspecs/win32-g++ -IH:/WORKSPACE/_Qt/_archive/ConvertText -IC:/Qt/Static/5.3.2/include -IC:/Qt/Static/5.3.2/include/QtDeclarative -IC:/Qt/Static/5.3.2/include/QtWidgets -IC:/Qt/Static/5.3.2/include/QtScript -IC:/Qt/Static/5.3.2/include/QtGui -IC:/Qt/Static/5.3.2/include/QtCore widget.h -o release/moc_widget.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
